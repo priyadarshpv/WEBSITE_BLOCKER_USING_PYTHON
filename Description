@@ -1,0 +1,29 @@
+WEBSITE_BLOCKER_USING_PYTHON
+Description:
+This Python-based project is designed to block distracting websites during specific working hours, helping users stay focused and improve productivity. The script modifies the system's hosts file to redirect specified websites to 127.0.0.1 (the local machine), effectively blocking access to them.
+
+Key Features:
+Customizable Website List: You can block any number of websites by adding them to a list.
+Time-based Blocking: The program blocks websites only during defined working hours, and automatically unblocks them after the specified time.
+Cross-Platform Support: Can be easily adapted for use on both Windows and Unix-based systems (by changing the path to the hosts file).
+Lightweight and Simple: Runs in the background with minimal resource consumption, making it suitable for everyday use.
+
+
+How it Works:
+The script runs an infinite loop that continuously checks the current time.
+During specified working hours, the script adds blocking rules to the system's hosts file, redirecting listed websites to 127.0.0.1.
+Once outside of working hours, the script automatically removes these blocking rules, restoring normal website access.
+The program pauses for 5 seconds after each check, minimizing system load while maintaining functionality.
+
+
+Setup Instructions:
+Clone the repository to your local machine.
+Modify the hosts_path in the code to point to your system's hosts file.
+For Windows: C:\Windows\System32\drivers\etc\hosts
+For Unix-based systems: /etc/hosts
+Add the websites you want to block to the websites_to_block list.
+Set your preferred start_hour and end_hour for blocking.
+Run the script using Python.
+
+
+
